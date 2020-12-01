@@ -1,0 +1,16 @@
+library(purrr)
+
+v <- readxl::read_xlsx(here::here("day1/day1_numbers.xlsx"), col_names=F)[[1]]
+
+n <- length(v)
+search <- as.list(expand.grid(1:n, 1:n))
+
+check_sum <- function(i,j){
+  if (v[[i]] + v[[j]] == 2020){
+    return(v[[i]]*v[[j]])
+  }
+}
+
+map2(search$Var1, search$Var2, ~check_sum(.x, .y)) %>%
+  flatten()
+

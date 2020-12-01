@@ -1,0 +1,23 @@
+{
+    "id": "41D6AD37",
+    "path": null,
+    "project_path": null,
+    "type": "r_code_browser",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1606855032617.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "context": ".GlobalEnv:::target_prod"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1606855014,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1606855032617,
+    "read_only": false,
+    "read_only_alternatives": []
+}
