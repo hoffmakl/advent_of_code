@@ -5,6 +5,8 @@ library(tidyverse)
 v <- readxl::read_xlsx(here::here("data/day2.xlsx"), col_names=F) %>%
   rename(p = ...1)
 
+tictoc::tic()
+
 df <- # clean vector into df
   v %>%
   separate(p, into = c("key","pw"), sep = ": ") %>%
@@ -29,3 +31,5 @@ df2 <-
   add_count(id) %>%
   filter(nn == 1)
 nrow(df2)
+
+tictoc::toc()

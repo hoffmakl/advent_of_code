@@ -4,6 +4,8 @@ library(purrr)
 
 v <- readxl::read_xlsx(here::here("data/day1.xlsx"), col_names=F)[[1]]
 
+tictoc::tic()
+
 check_sum <- function(idx, target){
   if (sum(v[idx]) == target){
     return(prod(v[idx]))
@@ -19,4 +21,4 @@ target_prod <- function(v, target, k){
 target_prod(v, 2020, 2) # challenge 1
 target_prod(v, 2020, 3) # challenge 2
 
-
+tictoc::toc()
